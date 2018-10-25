@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text">
+		<input type="button" value="盒子数量"/>
+		<script>
+		var oTxt = document.getElementsByTagName('input')[0];
+		var oBtn = document.getElementsByTagName('input')[1];
+		console.log(oBtn);
+		oBtn.onclick = function(){
+			if((oTxt.value%20) == 0){
+				alert(oTxt.value/20);
+			}else if(oTxt.value <= 20){
+				alert(1);
+			}else if((oTxt.value%20)>=1){
+				alert(parseInt(oTxt.value/20)+1);
+			}
+		}
+		</script>
+	</body>
+</html>
